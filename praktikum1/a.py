@@ -1,5 +1,6 @@
 import math
 
+
 def Z_statistik(text_file):
     # Schritt 1: Öffnen und lesen der Textdatei
     with open(text_file, 'r', encoding='utf-8') as file:
@@ -23,9 +24,10 @@ def Z_statistik(text_file):
     # Schritt 6: Ausgabe der Ergebnisse
     print("Buchstabe | Wahrscheinlichkeit | Informationsgehalt")
     for char, prob, info in zip(char_counts.keys(), char_probabilities.values(), char_information.values()):
-        print(f"{char!r}        | {prob:.6f}         | {info:.6f}")
+        print(f"{char!r:<9} | {prob:.6f}           | {info:.6f}")
 
     print(f"\nEntropie des Textes: {entropy:.6f}")
+
 
 # Beispielaufruf der Funktion
 Z_statistik("Text.txt")
